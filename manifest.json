@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Spocket Assistant",
+    "description": "Spocket Assistant helps you to manage and import products into your store",
+    "version": "1.0",
+    "action": {
+      "default_popup": "src/popup/index.html",
+      "default_icon": "spocket-logo.png"
+    }
+}
