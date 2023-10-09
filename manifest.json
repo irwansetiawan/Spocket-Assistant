@@ -3,8 +3,28 @@
     "name": "Spocket Assistant",
     "description": "Spocket Assistant helps you to manage and import products into your store",
     "version": "1.0",
+    "icons": {
+      "128": "spocket-logo.png"
+    },
     "action": {
       "default_popup": "src/popup/index.html",
       "default_icon": "spocket-logo.png"
-    }
+    },
+    "background": {
+      "service_worker": "src/background/serviceworker.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://app.spocket.co/*"],
+        "js": ["src/contentscripts/contentscript.js"],
+        "run_at": "document_idle",
+        "world": "MAIN"
+      }
+    ],
+    "host_permissions": [
+      "https://*.spocket.co/*"
+    ],
+    "permissions": [
+      "webRequest"
+    ]
 }
