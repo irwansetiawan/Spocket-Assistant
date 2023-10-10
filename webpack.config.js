@@ -5,6 +5,7 @@ module.exports = {
    entry: {
       serviceworker: path.resolve(__dirname, "src", "background/serviceworker.ts"),
       contentscript: path.resolve(__dirname, "src", "contentscripts/contentscript.ts"),
+      popup: path.resolve(__dirname, "src", "popup/popup.ts"),
    },
    output: {
       path: path.join(__dirname, "dist"),
@@ -24,7 +25,10 @@ module.exports = {
    },
    plugins: [
       new CopyPlugin({
-         patterns: [{from: ".", to: ".", context: "public"}]
+         patterns: [
+            {from: ".", to: ".", context: "public"},
+            {from: "src/popup/popup.html", to: "."}
+        ]
       }),
    ],
 };

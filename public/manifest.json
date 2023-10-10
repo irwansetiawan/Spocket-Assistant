@@ -7,7 +7,7 @@
       "128": "spocket-logo.png"
     },
     "action": {
-      "default_popup": "src/popup/index.html",
+      "default_popup": "popup.html",
       "default_icon": "spocket-logo.png"
     },
     "background": {
