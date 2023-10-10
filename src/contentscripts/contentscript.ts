@@ -1,16 +1,10 @@
+import { importListDetails, importListPrimary } from "./importfile";
+
 (() => {
-
-    const importListPrimary = (response) => {
-        console.log(response);
-    }
-
-    const importListDetails = (response) => {
-        console.log(response);
-    }
 
     (function() {
         var origOpen = XMLHttpRequest.prototype.open;
-        XMLHttpRequest.prototype.open = function() {
+        XMLHttpRequest.prototype.open = function(...args: any[]) {
             this.addEventListener('load', function() {
                 if (/newapi\.spocket\.co/.test(this.responseURL)) {
                     var response = null;
@@ -38,7 +32,8 @@
                     // }
                 }
             });
-            origOpen.apply(this, arguments);
+            console.log(args);
+            //origOpen.apply(this, args);
         };
         console.log('XHR injected');
     })();

@@ -4,6 +4,7 @@ module.exports = {
    mode: "production",
    entry: {
       serviceworker: path.resolve(__dirname, "src", "background/serviceworker.ts"),
+      contentscript: path.resolve(__dirname, "src", "contentscripts/contentscript.ts"),
    },
    output: {
       path: path.join(__dirname, "dist"),

@@ -16,7 +16,7 @@
     "content_scripts": [
       {
         "matches": ["https://app.spocket.co/*"],
-        "js": ["src/contentscripts/contentscript.js"],
+        "js": ["contentscript.js"],
         "run_at": "document_idle",
         "world": "MAIN"
       }
