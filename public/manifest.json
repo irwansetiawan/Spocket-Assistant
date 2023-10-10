@@ -11,7 +11,7 @@
       "default_icon": "spocket-logo.png"
     },
     "background": {
-      "service_worker": "src/background/serviceworker.js"
+      "service_worker": "serviceworker.js"
     },
     "content_scripts": [
       {
