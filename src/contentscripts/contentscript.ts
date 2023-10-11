@@ -10,7 +10,7 @@ import 'flowbite';
         XMLHttpRequest.prototype.open = function(...args: any[]) {
             this.addEventListener('load', function() {
                 if (/newapi\.spocket\.co/.test(this.responseURL)) {
-                    var response = null;
+                    let response: any = null;
                     try {
                         response = JSON.parse(this.responseText);
                     } catch(ex) {}
@@ -20,7 +20,7 @@ import 'flowbite';
                     }
 
                     if (/\/import_list\/details/.test(this.responseURL)) {
-                        importListDetails(response);
+                        setTimeout(() => { importListDetails(response) }, 500);
                     }
     
                     // if (response) {
