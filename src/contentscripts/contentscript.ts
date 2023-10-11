@@ -1,4 +1,4 @@
-import { importListDetails, importListPrimary } from "./importfile";
+import { importListDetails, importListPrimary } from "./importlist";
 
 (() => {
 
