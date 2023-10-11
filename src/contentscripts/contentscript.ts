@@ -32,8 +32,7 @@ import { importListDetails, importListPrimary } from "./importfile";
                     // }
                 }
             });
-            console.log(args);
-            //origOpen.apply(this, args);
+            origOpen.call(this, args[0], args[1], args[2], args[3], args[4]);
         };
         console.log('XHR injected');
     })();
