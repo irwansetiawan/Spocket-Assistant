@@ -1,4 +1,6 @@
 import { importListDetails, importListPrimary } from "./importlist";
+import { renderMenuCard } from "./menucard";
+import "../tailwind.css"
 
 (() => {
 
@@ -36,5 +38,7 @@ import { importListDetails, importListPrimary } from "./importlist";
         };
         console.log('XHR injected');
     })();
+
+    renderMenuCard();
     
 })();
