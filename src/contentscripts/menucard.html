@@ -1,3 +1,16 @@
-<div id="spocket-assistant-menu-card" class="bg-red-500">
-    <h1>Spocket Assistant</h1>
+<div id="spocket-assistant-menu-card"
+    class="block max-w-2xl p-6 bg-white border border-gray-200 rounded-lg
+            shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700
+            fixed top-10 right-10 z-10">
+    <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Spocket Assistant Settings
+    </h5>
+    <p class="font-normal text-gray-700 dark:text-gray-400">
+        <form>
+            <div class="mb-6">
+                <label for="steps-range" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Default gross profit margin: <span id="default_gross_profit_margin_value">{{defaultGrossProfitMargin}}</span>%</label>
+                <input id="steps-range" type="range" min="0" max="100" value="{{defaultGrossProfitMargin}}" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" onchange="document.getElementById('default_gross_profit_margin_value').innerHTML=this.value">
+            </div>
+        </form>
+    </p>
 </div>

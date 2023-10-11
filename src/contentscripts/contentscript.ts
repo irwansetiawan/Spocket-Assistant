@@ -1,6 +1,7 @@
 import { importListDetails, importListPrimary } from "./importlist";
 import { renderMenuCard } from "./menucard";
 import "../tailwind.css"
+import 'flowbite';
 
 (() => {
 
