@@ -4,6 +4,7 @@ export function importListPrimary(response: object) {
 }
 
 interface ImportListDetails {
+    id: string;
     listing_variations: ImportListingVariation[];
     shipping_countries: ImportShippingCountry[];
     shipping_domestic: ImportShippingCountry;
@@ -32,7 +33,14 @@ interface ImportShippingCountry {
     price_formatted: string;
 }
 
+let importListDetailsData: ImportListDetails[] = [];
+
 export function importListDetails (response: ImportListDetails) {
+    if (importListDetailsData.filter(data => data.id === response.id).length > 0) {
+        importListDetailsData = importListDetailsData.map(data => data.id === response.id ? response : data);
+    } else {
+        importListDetailsData.push(response);
+    }
     if (response && response.listing_variations) {
         for (const index in response.listing_variations) {
             const variant = response.listing_variations[index];
