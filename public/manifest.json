@@ -16,7 +16,13 @@
     "content_scripts": [
       {
         "matches": ["https://app.spocket.co/*"],
-        "js": ["contentscript.js"],
+        "js": ["contentscript_isolated.js"],
+        "run_at": "document_idle",
+        "world": "ISOLATED"
+      },
+      {
+        "matches": ["https://app.spocket.co/*"],
+        "js": ["contentscript_main.js"],
         "run_at": "document_idle",
         "world": "MAIN"
       }
